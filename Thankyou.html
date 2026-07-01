@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Thank You — Jyoti Gavali</title>
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      .grad-bg {
+        background: linear-gradient(135deg, #0B1120 0%, #1E3A8A 50%, #4F46E5 100%);
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.45);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      .dark .glass {
+        background: rgba(15, 23, 42, 0.45);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+    </style>
+  </head>
+
+  <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col relative transition-colors duration-300">
+    <!-- Decorative Background Blobs -->
+    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none opacity-50 dark:opacity-30">
+      <div class="absolute top-[10%] left-[-10%] w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-[120px] animate-pulse duration-[10s]"></div>
+      <div class="absolute bottom-[10%] right-[-10%] w-[500px] h-[500px] bg-cyan-500/20 rounded-full blur-[120px] animate-pulse duration-[10s]" style="animation-delay: 3s;"></div>
+    </div>
+
+    <!-- HEADER / NAV -->
+    <header class="sticky top-0 z-50 w-full backdrop-blur-md bg-white/70 dark:bg-slate-950/70 border-b border-slate-200/50 dark:border-slate-800/50 transition-colors duration-300">
+      <nav class="max-w-6xl mx-auto flex items-center justify-between p-4 sm:p-6">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 text-white font-bold text-lg shadow-lg shadow-purple-500/25">
+            JG
+          </div>
+          <a href="index.html" class="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400">Jyoti G.</a>
+        </div>
+
+        <ul class="hidden md:flex items-center gap-6 font-medium text-slate-700 dark:text-slate-300">
+          <li><a href="index.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</a></li>
+          <li><a href="about.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a></li>
+          <li><a href="experience.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Experience</a></li>
+          <li><a href="projects.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Projects</a></li>
+          <li><a href="skills.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Skills</a></li>
+          <li><a href="achievements.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Achievements</a></li>
+          <li><a href="contact.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a></li>
+        </ul>
+
+        <div class="flex items-center gap-3">
+          <button id="themeToggle" aria-label="Toggle dark mode" class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300 text-lg shadow-sm">
+            ☀️
+          </button>
+          <button id="menuBtn" class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300 text-lg shadow-sm" aria-label="Toggle Menu">
+            ☰
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200/50 dark:border-slate-800/50 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-6xl mx-auto p-4 flex flex-col gap-3 font-medium text-slate-700 dark:text-slate-300">
+          <a href="index.html" class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</a>
+          <a href="about.html" class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
+          <a href="experience.html" class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Experience</a>
+          <a href="projects.html" class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Projects</a>
+          <a href="skills.html" class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Skills</a>
+          <a href="achievements.html" class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Achievements</a>
+          <a href="contact.html" class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="grad-bg text-white py-20 relative overflow-hidden">
+      <div class="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
+      <div class="max-w-4xl mx-auto text-center px-6 relative z-10">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-3 tracking-tight">Thank You!</h1>
+        <p class="text-lg md:text-xl opacity-90 font-light">Thank you for visiting my portfolio. I will get back to you shortly!</p>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-4xl mx-auto px-6 py-20 flex-1 w-full text-center flex items-center justify-center">
+      <div class="p-8 sm:p-12 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md shadow-2xl max-w-xl space-y-6">
+        <div class="w-16 h-16 bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center rounded-full mx-auto text-3xl shadow-lg">
+          ✓
+        </div>
+        <h2 class="text-2xl font-bold text-slate-850 dark:text-slate-100">Message Received</h2>
+        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed text-center">
+          Your interest means a lot! I am always open to new software developer roles, internships, collaborations, or tech discussions.
+        </p>
+        
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="Final_Resume_Jyoti.pdf" download class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-bold hover:shadow-lg transition-all text-sm w-full sm:w-auto justify-center">
+            ⬇️ Download My Resume
+          </a>
+          <a href="index.html" class="inline-flex items-center justify-center px-6 py-3 border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 hover:bg-slate-100 text-slate-700 dark:text-slate-300 font-semibold rounded-xl transition-all text-sm w-full sm:w-auto">
+            ← Back to Home
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md">
+      <div class="max-w-6xl mx-auto p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="text-sm text-slate-500 dark:text-slate-400">© 2026 Jyoti S. Gavali. All rights reserved.</div>
+        <div class="flex gap-6 text-sm font-semibold">
+          <a href="https://github.com/Its-Jyoti405" target="_blank" rel="noopener" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">GitHub</a>
+          <a href="https://www.linkedin.com/in/jyoti-gawali-092208220/" target="_blank" rel="noopener" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">LinkedIn</a>
+          <a href="mailto:jgawali405@gmail.com" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Email</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Theme toggle logic
+        const themeToggle = document.getElementById('themeToggle');
+        const root = document.documentElement;
+        
+        function setIcon(isDark) { 
+          themeToggle.innerHTML = isDark ? '🌙' : '☀️'; 
+        }
+        
+        const stored = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (stored === 'dark' || (!stored && systemPrefersDark)) {
+          root.classList.add('dark'); 
+          setIcon(true);
+        } else {
+          root.classList.remove('dark'); 
+          setIcon(false);
+        }
+        
+        themeToggle.addEventListener('click', () => {
+          const isDark = root.classList.toggle('dark');
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+          setIcon(isDark);
+        });
+
+        // Mobile menu toggle logic
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let menuOpen = false;
+
+        if (menuBtn && mobileMenu) {
+          menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuOpen = !menuOpen;
+            menuBtn.textContent = menuOpen ? '✖' : '☰';
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

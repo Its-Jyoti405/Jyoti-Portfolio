@@ -1,0 +1,66 @@
+<!-- 🌐 Responsive Navbar + Footer -->
+<!-- Save this as: mobile-header-footer.html -->
+
+<header class="w-full border-b dark:border-gray-800">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between p-4 sm:p-6">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 flex items-center justify-center rounded-full grad-bg text-white font-bold text-lg shadow-md">JG</div>
+      <a href="index.html" class="text-xl font-semibold tracking-tight">Jyoti G.</a>
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex items-center gap-3">
+      <button id="themeToggle" aria-label="Toggle dark mode" class="p-2 rounded-md border dark:border-gray-700"></button>
+      <button id="menuBtn" class="md:hidden text-2xl">☰</button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <ul id="mobileMenu" class="hidden flex-col items-center bg-white dark:bg-gray-900 py-4 border-t dark:border-gray-800 md:hidden">
+    <li><a href="index.html" class="block py-2">Home</a></li>
+    <li><a href="about.html" class="block py-2">About</a></li>
+    <li><a href="projects.html" class="block py-2">Projects</a></li>
+    <li><a href="skills.html" class="block py-2">Skills</a></li>
+    <li><a href="achievements.html" class="block py-2">Achievements</a></li>
+    <li><a href="contact.html" class="block py-2">Contact</a></li>
+  </ul>
+</header>
+
+<!-- Footer Section -->
+<footer class="border-t dark:border-gray-800 mt-16">
+  <div class="max-w-6xl mx-auto p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="text-sm text-center md:text-left">© 2025 Jyoti S. Gavali</div>
+    <div class="flex gap-4 text-sm justify-center md:justify-end">
+      <a href="https://github.com/Its-Jyoti405" target="_blank" class="hover:underline">GitHub</a>
+      <a href="#" target="_blank" class="hover:underline">LinkedIn</a>
+      <a href="mailto:jgawali405@gmail.com" class="hover:underline">Email</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+  // Mobile menu toggle
+  document.getElementById('menuBtn').addEventListener('click', () => {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('hidden');
+  });
+
+  // Theme toggle
+  document.addEventListener("DOMContentLoaded", () => {
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    function setIcon(isDark) { themeToggle.innerHTML = isDark ? '🌙' : '☀️'; }
+    const stored = localStorage.getItem('theme');
+    if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      root.classList.add('dark'); setIcon(true);
+    } else {
+      root.classList.remove('dark'); setIcon(false);
+    }
+    themeToggle.addEventListener('click', () => {
+      const isDark = root.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      setIcon(isDark);
+    });
+  });
+</script>
