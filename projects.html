@@ -1,433 +1,530 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Projects — Jyoti Gavali</title>
-    
-    <!-- Google Fonts: Plus Jakarta Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            }
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Jyoti Gavali</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
           }
         }
       }
-    </script>
+    }
+  </script>
 
-    <style>
-      .grad-bg {
-        background: linear-gradient(135deg, #0B1120 0%, #1E3A8A 50%, #4F46E5 100%);
-      }
-      .glass {
-        background: rgba(255, 255, 255, 0.45);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-      }
-      .dark .glass {
-        background: rgba(15, 23, 42, 0.45);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-      }
-      .project-card {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-    </style>
-  </head>
+  <style>
+    .grad-bg {
+      background: linear-gradient(135deg, #0B1120 0%, #1E3A8A 50%, #4F46E5 100%);
+    }
 
-  <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col relative transition-colors duration-300">
-    <!-- Decorative Background Blobs -->
-    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none opacity-50 dark:opacity-30">
-      <div class="absolute top-[10%] left-[-10%] w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-[120px] animate-pulse duration-[10s]"></div>
-      <div class="absolute bottom-[10%] right-[-10%] w-[500px] h-[500px] bg-cyan-500/20 rounded-full blur-[120px] animate-pulse duration-[10s]" style="animation-delay: 3s;"></div>
+    .glass {
+      background: rgba(255, 255, 255, 0.45);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .dark .glass {
+      background: rgba(15, 23, 42, 0.45);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .project-card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  </style>
+</head>
+
+<body
+  class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col relative transition-colors duration-300">
+  <!-- Decorative Background Blobs -->
+  <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none opacity-50 dark:opacity-30">
+    <div
+      class="absolute top-[10%] left-[-10%] w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-[120px] animate-pulse duration-[10s]">
+    </div>
+    <div
+      class="absolute bottom-[10%] right-[-10%] w-[500px] h-[500px] bg-cyan-500/20 rounded-full blur-[120px] animate-pulse duration-[10s]"
+      style="animation-delay: 3s;"></div>
+  </div>
+
+  <!-- HEADER / NAV -->
+  <header
+    class="sticky top-0 z-50 w-full backdrop-blur-md bg-white/70 dark:bg-slate-950/70 border-b border-slate-200/50 dark:border-slate-800/50 transition-colors duration-300">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between p-4 sm:p-6">
+      <div class="flex items-center gap-3">
+        <div
+          class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 text-white font-bold text-lg shadow-lg shadow-purple-500/25">
+          JG
+        </div>
+        <a href="index.html"
+          class="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400">Jyoti
+          G.</a>
+      </div>
+
+      <ul class="hidden md:flex items-center gap-6 font-medium text-slate-700 dark:text-slate-300">
+        <li><a href="index.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</a>
+        </li>
+        <li><a href="about.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
+        </li>
+        <li><a href="experience.html"
+            class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Experience</a></li>
+        <li><a href="projects.html" class="text-indigo-600 dark:text-indigo-400 font-semibold">Projects</a></li>
+        <li><a href="skills.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Skills</a>
+        </li>
+        <li><a href="achievements.html"
+            class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Achievements</a></li>
+        <li><a href="contact.html"
+            class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a></li>
+      </ul>
+
+      <div class="flex items-center gap-3">
+        <button id="themeToggle" aria-label="Toggle dark mode"
+          class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300 text-lg shadow-sm">
+          ☀️
+        </button>
+        <button id="menuBtn"
+          class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300 text-lg shadow-sm"
+          aria-label="Toggle Menu">
+          ☰
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+      class="hidden md:hidden border-t border-slate-200/50 dark:border-slate-800/50 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md transition-all duration-300">
+      <div class="max-w-6xl mx-auto p-4 flex flex-col gap-3 font-medium text-slate-700 dark:text-slate-300">
+        <a href="index.html" class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</a>
+        <a href="about.html" class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
+        <a href="experience.html"
+          class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Experience</a>
+        <a href="projects.html" class="py-2 text-indigo-600 dark:text-indigo-400">Projects</a>
+        <a href="skills.html" class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Skills</a>
+        <a href="achievements.html"
+          class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Achievements</a>
+        <a href="contact.html"
+          class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="grad-bg text-white py-20 relative overflow-hidden">
+    <div class="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
+    <div class="max-w-4xl mx-auto text-center px-6 relative z-10">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-3 tracking-tight">My Projects</h1>
+      <p class="text-lg md:text-xl opacity-90 font-light">A curated showcase of my full stack, AI/ML, and immersive
+        development projects.</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-6xl mx-auto px-6 py-16 flex-1 w-full space-y-12">
+
+    <!-- Category Filter Tabs -->
+    <div class="flex flex-wrap justify-center gap-3">
+      <button data-filter="all"
+        class="filter-btn px-5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 font-semibold text-sm transition-all duration-300 shadow-sm hover:border-indigo-500 dark:hover:border-indigo-400 text-indigo-600 dark:text-indigo-400 ring-2 ring-indigo-500/20 dark:ring-indigo-400/20">
+        All Projects
+      </button>
+      <button data-filter="web"
+        class="filter-btn px-5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 font-semibold text-sm transition-all duration-300 shadow-sm hover:border-indigo-500 dark:hover:border-indigo-400 text-slate-600 dark:text-slate-400">
+        Web & Full Stack
+      </button>
+      <button data-filter="aiml"
+        class="filter-btn px-5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 font-semibold text-sm transition-all duration-300 shadow-sm hover:border-indigo-500 dark:hover:border-indigo-400 text-slate-600 dark:text-slate-400">
+        AI & Machine Learning
+      </button>
+      <button data-filter="arvr"
+        class="filter-btn px-5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 font-semibold text-sm transition-all duration-300 shadow-sm hover:border-indigo-500 dark:hover:border-indigo-400 text-slate-600 dark:text-slate-400">
+        AR / VR / Others
+      </button>
     </div>
 
-    <!-- HEADER / NAV -->
-    <header class="sticky top-0 z-50 w-full backdrop-blur-md bg-white/70 dark:bg-slate-950/70 border-b border-slate-200/50 dark:border-slate-800/50 transition-colors duration-300">
-      <nav class="max-w-6xl mx-auto flex items-center justify-between p-4 sm:p-6">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 text-white font-bold text-lg shadow-lg shadow-purple-500/25">
-            JG
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Project 1: E-Dairy Management System -->
+      <article data-category="web"
+        class="project-card p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-500/5 transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-start mb-3">
+            <span
+              class="w-10 h-10 flex items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 text-xl">🥛</span>
+            <span
+              class="text-xs font-semibold px-2.5 py-1 bg-sky-100 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 rounded-full">Web
+              App</span>
           </div>
-          <a href="index.html" class="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400">Jyoti G.</a>
+          <h2 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2">E-Dairy Management System</h2>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 text-justify">
+            A full-stack Dairy Management System developed to simplify dairy business operations. Enables efficient
+            customer accounts, milk collection logs, billing & invoice generation, payment tracking, and daily
+            transactions.
+          </p>
         </div>
-
-        <ul class="hidden md:flex items-center gap-6 font-medium text-slate-700 dark:text-slate-300">
-          <li><a href="index.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</a></li>
-          <li><a href="about.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a></li>
-          <li><a href="experience.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Experience</a></li>
-          <li><a href="projects.html" class="text-indigo-600 dark:text-indigo-400 font-semibold">Projects</a></li>
-          <li><a href="skills.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Skills</a></li>
-          <li><a href="achievements.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Achievements</a></li>
-          <li><a href="contact.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a></li>
-        </ul>
-
-        <div class="flex items-center gap-3">
-          <button id="themeToggle" aria-label="Toggle dark mode" class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300 text-lg shadow-sm">
-            ☀️
-          </button>
-          <button id="menuBtn" class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300 text-lg shadow-sm" aria-label="Toggle Menu">
-            ☰
-          </button>
+        <div>
+          <div class="mb-4 text-xs">
+            <p class="text-slate-500 mb-1"><strong>Role:</strong> Full Stack Developer</p>
+            <div class="flex flex-wrap gap-1.5 font-medium opacity-90">
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">HTML5</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">CSS3</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">JS</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Bootstrap 5</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">PHP</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">MySQL</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Apache</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">XAMPP</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Git</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">GitHub</span>
+            </div>
+          </div>
+          <a href="https://github.com/Its-Jyoti405/E-Dairy-Management-System" target="_blank" rel="noopener"
+            class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
+            GitHub Repo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
         </div>
-      </nav>
+      </article>
 
-      <!-- Mobile Menu -->
-      <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200/50 dark:border-slate-800/50 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md transition-all duration-300">
-        <div class="max-w-6xl mx-auto p-4 flex flex-col gap-3 font-medium text-slate-700 dark:text-slate-300">
-          <a href="index.html" class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</a>
-          <a href="about.html" class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
-          <a href="experience.html" class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Experience</a>
-          <a href="projects.html" class="py-2 text-indigo-600 dark:text-indigo-400">Projects</a>
-          <a href="skills.html" class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Skills</a>
-          <a href="achievements.html" class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Achievements</a>
-          <a href="contact.html" class="py-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+      <!-- Project 2: AI-Based Diagnosis Assistance System -->
+      <article data-category="aiml"
+        class="project-card p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-500/5 transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-start mb-3">
+            <span
+              class="w-10 h-10 flex items-center justify-center rounded-xl bg-purple-100 dark:bg-purple-950 text-purple-600 dark:text-purple-400 text-xl">🧬</span>
+            <span
+              class="text-xs font-semibold px-2.5 py-1 bg-purple-100 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 rounded-full">AI
+              / DL</span>
+          </div>
+          <h2 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2">Diagnosis Assistance</h2>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 text-justify">
+            Developed deep learning models and image analysis pipelines to screen brain tumors and lung diseases,
+            assisting clinical diagnosis and rapid healthcare analysis.
+          </p>
         </div>
-      </div>
-    </header>
-
-    <!-- HERO SECTION -->
-    <section class="grad-bg text-white py-20 relative overflow-hidden">
-      <div class="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
-      <div class="max-w-4xl mx-auto text-center px-6 relative z-10">
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-3 tracking-tight">My Projects</h1>
-        <p class="text-lg md:text-xl opacity-90 font-light">A curated showcase of my full stack, AI/ML, and immersive development projects.</p>
-      </div>
-    </section>
-
-    <!-- MAIN CONTENT -->
-    <main class="max-w-6xl mx-auto px-6 py-16 flex-1 w-full space-y-12">
-      
-      <!-- Category Filter Tabs -->
-      <div class="flex flex-wrap justify-center gap-3">
-        <button data-filter="all" class="filter-btn px-5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 font-semibold text-sm transition-all duration-300 shadow-sm hover:border-indigo-500 dark:hover:border-indigo-400 text-indigo-600 dark:text-indigo-400 ring-2 ring-indigo-500/20 dark:ring-indigo-400/20">
-          All Projects
-        </button>
-        <button data-filter="web" class="filter-btn px-5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 font-semibold text-sm transition-all duration-300 shadow-sm hover:border-indigo-500 dark:hover:border-indigo-400 text-slate-600 dark:text-slate-400">
-          Web & Full Stack
-        </button>
-        <button data-filter="aiml" class="filter-btn px-5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 font-semibold text-sm transition-all duration-300 shadow-sm hover:border-indigo-500 dark:hover:border-indigo-400 text-slate-600 dark:text-slate-400">
-          AI & Machine Learning
-        </button>
-        <button data-filter="arvr" class="filter-btn px-5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 font-semibold text-sm transition-all duration-300 shadow-sm hover:border-indigo-500 dark:hover:border-indigo-400 text-slate-600 dark:text-slate-400">
-          AR / VR / Others
-        </button>
-      </div>
-
-      <!-- Projects Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- Project 1: E-Dairy Management System -->
-        <article data-category="web" class="project-card p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-500/5 transition-all duration-300 flex flex-col justify-between">
-          <div>
-            <div class="flex justify-between items-start mb-3">
-              <span class="w-10 h-10 flex items-center justify-center rounded-xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 text-xl">🥛</span>
-              <span class="text-xs font-semibold px-2.5 py-1 bg-sky-100 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 rounded-full">Web App</span>
+        <div>
+          <div class="mb-4 text-xs">
+            <p class="text-slate-500 mb-1"><strong>Role:</strong> Team Lead</p>
+            <div class="flex flex-wrap gap-1.5 font-medium opacity-90">
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Python</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">TensorFlow</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Django</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">OpenCV</span>
             </div>
-            <h2 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2">E-Dairy Management System</h2>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 text-justify">
-              A full-stack Dairy Management System developed to simplify dairy business operations. Enables efficient customer accounts, milk collection logs, billing & invoice generation, payment tracking, and daily transactions.
-            </p>
           </div>
-          <div>
-            <div class="mb-4 text-xs">
-              <p class="text-slate-500 mb-1"><strong>Role:</strong> Full Stack Developer</p>
-              <div class="flex flex-wrap gap-1.5 font-medium opacity-90">
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">HTML5</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">CSS3</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">JS</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Bootstrap 5</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">PHP</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">MySQL</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Apache</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">XAMPP</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Git</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">GitHub</span>
-              </div>
-            </div>
-            <a href="https://github.com/Its-Jyoti405/E-Dairy-Management-System" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
-              GitHub Repo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Project 2: AI-Based Diagnosis Assistance System -->
-        <article data-category="aiml" class="project-card p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-500/5 transition-all duration-300 flex flex-col justify-between">
-          <div>
-            <div class="flex justify-between items-start mb-3">
-              <span class="w-10 h-10 flex items-center justify-center rounded-xl bg-purple-100 dark:bg-purple-950 text-purple-600 dark:text-purple-400 text-xl">🧬</span>
-              <span class="text-xs font-semibold px-2.5 py-1 bg-purple-100 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 rounded-full">AI / DL</span>
-            </div>
-            <h2 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2">Diagnosis Assistance</h2>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 text-justify">
-              Developed deep learning models and image analysis pipelines to screen brain tumors and lung diseases, assisting clinical diagnosis and rapid healthcare analysis.
-            </p>
-          </div>
-          <div>
-            <div class="mb-4 text-xs">
-              <p class="text-slate-500 mb-1"><strong>Role:</strong> Team Lead</p>
-              <div class="flex flex-wrap gap-1.5 font-medium opacity-90">
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Python</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">TensorFlow</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Django</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">OpenCV</span>
-              </div>
-            </div>
-            <a href="https://github.com/Its-Jyoti405/AI-based-diagnosis-assistance-system" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
-              GitHub Repo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Project 3: Virtual Job Interview Simulator -->
-        <article data-category="aiml" class="project-card p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-500/5 transition-all duration-300 flex flex-col justify-between">
-          <div>
-            <div class="flex justify-between items-start mb-3">
-              <span class="w-10 h-10 flex items-center justify-center rounded-xl bg-pink-100 dark:bg-pink-950 text-pink-600 dark:text-pink-400 text-xl">🎯</span>
-              <span class="text-xs font-semibold px-2.5 py-1 bg-pink-100 dark:bg-pink-950/60 text-pink-700 dark:text-pink-300 rounded-full">Gen AI</span>
-            </div>
-            <h2 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2">Job Interview Simulator</h2>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 text-justify">
-              An AI-powered recruitment platform generating technical interview queries. Translates applicant responses into analytics reports and feedback metrics using NLP.
-            </p>
-          </div>
-          <div>
-            <div class="mb-4 text-xs">
-              <p class="text-slate-500 mb-1"><strong>Role:</strong> Team Lead</p>
-              <div class="flex flex-wrap gap-1.5 font-medium opacity-90">
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">React.js</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Django</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Gemini API</span>
-              </div>
-            </div>
-            <a href="https://github.com/Its-Jyoti405/job_interview_project" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
-              GitHub Repo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Project 4: Interactive AR System -->
-        <article data-category="arvr" class="project-card p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-500/5 transition-all duration-300 flex flex-col justify-between">
-          <div>
-            <div class="flex justify-between items-start mb-3">
-              <span class="w-10 h-10 flex items-center justify-center rounded-xl bg-teal-100 dark:bg-teal-950 text-teal-600 dark:text-teal-400 text-xl">🔬</span>
-              <span class="text-xs font-semibold px-2.5 py-1 bg-teal-100 dark:bg-teal-950/60 text-teal-700 dark:text-teal-300 rounded-full">AR / VR</span>
-            </div>
-            <h2 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2">AR Limit Test Simulator</h2>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 text-justify">
-              An Augmented Reality-based chemical simulation system demonstrating pharmaceutical laboratory procedures and limit test reactions with 3D visualization.
-            </p>
-          </div>
-          <div>
-            <div class="mb-4 text-xs">
-              <p class="text-slate-500 mb-1"><strong>Role:</strong> Modeling & Sim Dev</p>
-              <div class="flex flex-wrap gap-1.5 font-medium opacity-90">
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Unity 3D</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Vuforia</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Blender</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">React.js</span>
-              </div>
-            </div>
-            <a href="https://chloridelimittest.netlify.app/" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
-              Live Demo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Project 5: Blood Donation Portal -->
-        <article data-category="web" class="project-card p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-500/5 transition-all duration-300 flex flex-col justify-between">
-          <div>
-            <div class="flex justify-between items-start mb-3">
-              <span class="w-10 h-10 flex items-center justify-center rounded-xl bg-red-100 dark:bg-red-950 text-red-600 dark:text-red-400 text-xl">🩸</span>
-              <span class="text-xs font-semibold px-2.5 py-1 bg-red-100 dark:bg-red-950/60 text-red-700 dark:text-red-300 rounded-full">Web Portal</span>
-            </div>
-            <h2 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2">Blood Donation Portal</h2>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 text-justify">
-              A portal connecting blood banks, donor networks, and recipients. Integrates local geographic search, matching algorithms, donor scheduling, and admin dashboards.
-            </p>
-          </div>
-          <div>
-            <div class="mb-4 text-xs">
-              <p class="text-slate-500 mb-1"><strong>Role:</strong> Full Stack Developer</p>
-              <div class="flex flex-wrap gap-1.5 font-medium opacity-90">
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">HTML</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">CSS</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">PHP</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">MySQL</span>
-              </div>
-            </div>
-            <a href="https://github.com/Its-Jyoti405/blood-donation-portal" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
-              GitHub Repo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Project 6: Bake With Love -->
-        <article data-category="web" class="project-card p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-500/5 transition-all duration-300 flex flex-col justify-between">
-          <div>
-            <div class="flex justify-between items-start mb-3">
-              <span class="w-10 h-10 flex items-center justify-center rounded-xl bg-orange-100 dark:bg-orange-950 text-orange-600 dark:text-orange-400 text-xl">🍰</span>
-              <span class="text-xs font-semibold px-2.5 py-1 bg-orange-100 dark:bg-orange-950/60 text-orange-700 dark:text-sky-300 rounded-full">Bakery App</span>
-            </div>
-            <h2 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2">Bake With Love System</h2>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 text-justify">
-              Bakery management system managing product sales, customer profiles, dynamic menu pricing, receipt generation, and real-time inventory levels.
-            </p>
-          </div>
-          <div>
-            <div class="mb-4 text-xs">
-              <p class="text-slate-500 mb-1"><strong>Role:</strong> Web Dev Intern</p>
-              <div class="flex flex-wrap gap-1.5 font-medium opacity-90">
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">HTML</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">CSS</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">PHP</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">MySQL</span>
-              </div>
-            </div>
-            <a href="https://github.com/Its-Jyoti405/Bake-with-love/" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
-              GitHub Repo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Project 7: AI-Based Fall Detection System -->
-        <article data-category="aiml" class="project-card p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-500/5 transition-all duration-300 flex flex-col justify-between">
-          <div>
-            <div class="flex justify-between items-start mb-3">
-              <span class="w-10 h-10 flex items-center justify-center rounded-xl bg-rose-100 dark:bg-rose-950 text-rose-600 dark:text-rose-400 text-xl">🚨</span>
-              <span class="text-xs font-semibold px-2.5 py-1 bg-rose-100 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300 rounded-full">AI / CV</span>
-            </div>
-            <h2 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2">AI-Based Fall Detection System</h2>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 text-justify">
-              A real-time AI system that detects human falls using Computer Vision and Machine Learning. Integrates a React.js frontend with an alert notification system and camera detection module to assist elderly care and healthcare monitoring.
-            </p>
-          </div>
-          <div>
-            <div class="mb-4 text-xs">
-              <p class="text-slate-500 mb-1"><strong>Role:</strong> Frontend & Integration Developer</p>
-              <div class="flex flex-wrap gap-1.5 font-medium opacity-90">
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">React.js</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Python</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Machine Learning</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Computer Vision</span>
-                <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">REST APIs</span>
-              </div>
-            </div>
-            <a href="https://github.com/Its-Jyoti405/AI_BASED_FALL_DETECTION_SYSTEM" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
-              GitHub Repo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </a>
-          </div>
-        </article>
-
-      </div>
-
-      <!-- CTA to Skills -->
-      <div class="text-center mt-16">
-        <a href="skills.html" class="px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl hover:shadow-indigo-500/20 transition-all inline-block">View My Skills</a>
-      </div>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="border-t border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md">
-      <div class="max-w-6xl mx-auto p-6 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div class="text-sm text-slate-500 dark:text-slate-400">© 2026 Jyoti S. Gavali. All rights reserved.</div>
-        <div class="flex gap-6 text-sm font-semibold">
-          <a href="https://github.com/Its-Jyoti405" target="_blank" rel="noopener" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">GitHub</a>
-          <a href="https://www.linkedin.com/in/jyoti-gawali-092208220/" target="_blank" rel="noopener" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">LinkedIn</a>
-          <a href="mailto:jgawali405@gmail.com" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Email</a>
+          <a href="https://github.com/Its-Jyoti405/AI-based-diagnosis-assistance-system" target="_blank" rel="noopener"
+            class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
+            GitHub Repo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
         </div>
+      </article>
+
+      <!-- Project 3: Virtual Job Interview Simulator -->
+      <article data-category="aiml"
+        class="project-card p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-500/5 transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-start mb-3">
+            <span
+              class="w-10 h-10 flex items-center justify-center rounded-xl bg-pink-100 dark:bg-pink-950 text-pink-600 dark:text-pink-400 text-xl">🎯</span>
+            <span
+              class="text-xs font-semibold px-2.5 py-1 bg-pink-100 dark:bg-pink-950/60 text-pink-700 dark:text-pink-300 rounded-full">Gen
+              AI</span>
+          </div>
+          <h2 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2">Job Interview Simulator</h2>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 text-justify">
+            An AI-powered recruitment platform generating technical interview queries. Translates applicant responses
+            into analytics reports and feedback metrics using NLP.
+          </p>
+        </div>
+        <div>
+          <div class="mb-4 text-xs">
+            <p class="text-slate-500 mb-1"><strong>Role:</strong> Team Lead</p>
+            <div class="flex flex-wrap gap-1.5 font-medium opacity-90">
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">React.js</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Django</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Gemini API</span>
+            </div>
+          </div>
+          <a href="https://github.com/Its-Jyoti405/job_interview_project" target="_blank" rel="noopener"
+            class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
+            GitHub Repo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 4: Interactive AR System -->
+      <article data-category="arvr"
+        class="project-card p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-500/5 transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-start mb-3">
+            <span
+              class="w-10 h-10 flex items-center justify-center rounded-xl bg-teal-100 dark:bg-teal-950 text-teal-600 dark:text-teal-400 text-xl">🔬</span>
+            <span
+              class="text-xs font-semibold px-2.5 py-1 bg-teal-100 dark:bg-teal-950/60 text-teal-700 dark:text-teal-300 rounded-full">AR
+              / VR</span>
+          </div>
+          <h2 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2">AR Limit Test Simulator</h2>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 text-justify">
+            An Augmented Reality-based chemical simulation system demonstrating pharmaceutical laboratory procedures and
+            limit test reactions with 3D visualization.
+          </p>
+        </div>
+        <div>
+          <div class="mb-4 text-xs">
+            <p class="text-slate-500 mb-1"><strong>Role:</strong> Modeling & Sim Dev</p>
+            <div class="flex flex-wrap gap-1.5 font-medium opacity-90">
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Unity 3D</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Vuforia</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Blender</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">React.js</span>
+            </div>
+          </div>
+          <a href="https://chloridelimittest.netlify.app/" target="_blank" rel="noopener"
+            class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
+            Live Demo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 5: Blood Donation Portal -->
+      <article data-category="web"
+        class="project-card p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-500/5 transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-start mb-3">
+            <span
+              class="w-10 h-10 flex items-center justify-center rounded-xl bg-red-100 dark:bg-red-950 text-red-600 dark:text-red-400 text-xl">🩸</span>
+            <span
+              class="text-xs font-semibold px-2.5 py-1 bg-red-100 dark:bg-red-950/60 text-red-700 dark:text-red-300 rounded-full">Web
+              Portal</span>
+          </div>
+          <h2 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2">Blood Donation Portal</h2>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 text-justify">
+            A portal connecting blood banks, donor networks, and recipients. Integrates local geographic search,
+            matching algorithms, donor scheduling, and admin dashboards.
+          </p>
+        </div>
+        <div>
+          <div class="mb-4 text-xs">
+            <p class="text-slate-500 mb-1"><strong>Role:</strong> Full Stack Developer</p>
+            <div class="flex flex-wrap gap-1.5 font-medium opacity-90">
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">HTML</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">CSS</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">PHP</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">MySQL</span>
+            </div>
+          </div>
+          <a href="https://github.com/Its-Jyoti405/blood-donation-portal" target="_blank" rel="noopener"
+            class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
+            GitHub Repo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 6: Bake With Love -->
+      <article data-category="web"
+        class="project-card p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-500/5 transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-start mb-3">
+            <span
+              class="w-10 h-10 flex items-center justify-center rounded-xl bg-orange-100 dark:bg-orange-950 text-orange-600 dark:text-orange-400 text-xl">🍰</span>
+            <span
+              class="text-xs font-semibold px-2.5 py-1 bg-orange-100 dark:bg-orange-950/60 text-orange-700 dark:text-sky-300 rounded-full">Bakery
+              App</span>
+          </div>
+          <h2 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2">Bake With Love System</h2>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 text-justify">
+            Bakery management system managing product sales, customer profiles, dynamic menu pricing, receipt
+            generation, and real-time inventory levels.
+          </p>
+        </div>
+        <div>
+          <div class="mb-4 text-xs">
+            <p class="text-slate-500 mb-1"><strong>Role:</strong> Web Dev Intern</p>
+            <div class="flex flex-wrap gap-1.5 font-medium opacity-90">
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">HTML</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">CSS</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">PHP</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">MySQL</span>
+            </div>
+          </div>
+          <a href="https://github.com/Its-Jyoti405/Bake-with-love/" target="_blank" rel="noopener"
+            class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
+            GitHub Repo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 7: AI-Based Fall Detection System -->
+      <article data-category="aiml"
+        class="project-card p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-500/5 transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-start mb-3">
+            <span
+              class="w-10 h-10 flex items-center justify-center rounded-xl bg-rose-100 dark:bg-rose-950 text-rose-600 dark:text-rose-400 text-xl">🚨</span>
+            <span
+              class="text-xs font-semibold px-2.5 py-1 bg-rose-100 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300 rounded-full">AI
+              / CV</span>
+          </div>
+          <h2 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2">AI-Based Fall Detection System</h2>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 text-justify">
+            A real-time AI system that detects human falls using Computer Vision and Machine Learning. Integrates a
+            React.js frontend with an alert notification system and camera detection module to assist elderly care and
+            healthcare monitoring.
+          </p>
+        </div>
+        <div>
+          <div class="mb-4 text-xs">
+            <p class="text-slate-500 mb-1"><strong>Role:</strong> Frontend & Integration Developer</p>
+            <div class="flex flex-wrap gap-1.5 font-medium opacity-90">
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">React.js</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Python</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Machine Learning</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">Computer Vision</span>
+              <span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded">REST APIs</span>
+            </div>
+          </div>
+          <a href="https://github.com/Its-Jyoti405/AI_BASED_FALL_DETECTION_SYSTEM" target="_blank" rel="noopener"
+            class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
+            GitHub Repo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- CTA to Skills -->
+    <div class="text-center mt-16">
+      <a href="skills.html"
+        class="px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl hover:shadow-indigo-500/20 transition-all inline-block">View
+        My Skills</a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer
+    class="border-t border-slate-200/50 dark:border-slate-800/50 bg-white/30 dark:bg-slate-900/30 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-sm text-slate-500 dark:text-slate-400">© 2026 Jyoti S. Gavali. All rights reserved.</div>
+      <div class="flex gap-6 text-sm font-semibold">
+        <a href="https://github.com/Its-Jyoti405" target="_blank" rel="noopener"
+          class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/in/jyoti-gavali-092208220/" target="_blank" rel="noopener"
+          class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">LinkedIn</a>
+        <a href="mailto:jgawali405@gmail.com"
+          class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Email</a>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <!-- SCRIPTS -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Theme toggle logic
-        const themeToggle = document.getElementById('themeToggle');
-        const root = document.documentElement;
-        
-        function setIcon(isDark) { 
-          themeToggle.innerHTML = isDark ? '🌙' : '☀️'; 
-        }
-        
-        const stored = localStorage.getItem('theme');
-        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        
-        if (stored === 'dark' || (!stored && systemPrefersDark)) {
-          root.classList.add('dark'); 
-          setIcon(true);
-        } else {
-          root.classList.remove('dark'); 
-          setIcon(false);
-        }
-        
-        themeToggle.addEventListener('click', () => {
-          const isDark = root.classList.toggle('dark');
-          localStorage.setItem('theme', isDark ? 'dark' : 'light');
-          setIcon(isDark);
-        });
+  <!-- SCRIPTS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Theme toggle logic
+      const themeToggle = document.getElementById('themeToggle');
+      const root = document.documentElement;
 
-        // Mobile menu toggle logic
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        let menuOpen = false;
+      function setIcon(isDark) {
+        themeToggle.innerHTML = isDark ? '🌙' : '☀️';
+      }
 
-        if (menuBtn && mobileMenu) {
-          menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            menuOpen = !menuOpen;
-            menuBtn.textContent = menuOpen ? '✖' : '☰';
-          });
-        }
+      const stored = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-        // Project filtering logic
-        const filterButtons = document.querySelectorAll(".filter-btn");
-        const projectCards = document.querySelectorAll(".project-card");
+      if (stored === 'dark' || (!stored && systemPrefersDark)) {
+        root.classList.add('dark');
+        setIcon(true);
+      } else {
+        root.classList.remove('dark');
+        setIcon(false);
+      }
 
-        filterButtons.forEach(btn => {
-          btn.addEventListener("click", () => {
-            // Remove active classes from all buttons
-            filterButtons.forEach(b => {
-              b.classList.remove("text-indigo-600", "dark:text-indigo-400", "ring-2", "ring-indigo-500/20", "dark:ring-indigo-400/20");
-              b.classList.add("text-slate-600", "dark:text-slate-400");
-            });
-
-            // Add active styles to clicked button
-            btn.classList.remove("text-slate-600", "dark:text-slate-400");
-            btn.classList.add("text-indigo-600", "dark:text-indigo-400", "ring-2", "ring-indigo-500/20", "dark:ring-indigo-400/20");
-
-            const filter = btn.getAttribute("data-filter");
-
-            projectCards.forEach(card => {
-              const category = card.getAttribute("data-category");
-              if (filter === "all" || category === filter) {
-                card.style.opacity = "0";
-                card.classList.remove("hidden");
-                setTimeout(() => {
-                  card.style.opacity = "1";
-                  card.style.transform = "scale(1)";
-                }, 50);
-              } else {
-                card.style.opacity = "0";
-                card.style.transform = "scale(0.95)";
-                setTimeout(() => {
-                  card.classList.add("hidden");
-                }, 300);
-              }
-            });
-          });
-        });
-
+      themeToggle.addEventListener('click', () => {
+        const isDark = root.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        setIcon(isDark);
       });
-    </script>
-  </body>
+
+      // Mobile menu toggle logic
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      let menuOpen = false;
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          menuOpen = !menuOpen;
+          menuBtn.textContent = menuOpen ? '✖' : '☰';
+        });
+      }
+
+      // Project filtering logic
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const projectCards = document.querySelectorAll(".project-card");
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          // Remove active classes from all buttons
+          filterButtons.forEach(b => {
+            b.classList.remove("text-indigo-600", "dark:text-indigo-400", "ring-2", "ring-indigo-500/20", "dark:ring-indigo-400/20");
+            b.classList.add("text-slate-600", "dark:text-slate-400");
+          });
+
+          // Add active styles to clicked button
+          btn.classList.remove("text-slate-600", "dark:text-slate-400");
+          btn.classList.add("text-indigo-600", "dark:text-indigo-400", "ring-2", "ring-indigo-500/20", "dark:ring-indigo-400/20");
+
+          const filter = btn.getAttribute("data-filter");
+
+          projectCards.forEach(card => {
+            const category = card.getAttribute("data-category");
+            if (filter === "all" || category === filter) {
+              card.style.opacity = "0";
+              card.classList.remove("hidden");
+              setTimeout(() => {
+                card.style.opacity = "1";
+                card.style.transform = "scale(1)";
+              }, 50);
+            } else {
+              card.style.opacity = "0";
+              card.style.transform = "scale(0.95)";
+              setTimeout(() => {
+                card.classList.add("hidden");
+              }, 300);
+            }
+          });
+        });
+      });
+
+    });
+  </script>
+</body>
+
 </html>
